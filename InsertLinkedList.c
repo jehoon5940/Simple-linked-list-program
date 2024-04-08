@@ -33,3 +33,43 @@ void printList(LinkedList_h* L)
     }
     printf(") \n");
 }
+
+// 첫 번째 노드로 삽입하는 연산
+void InsertFirst Node(IinkedList_he L. char*x) {
+    listNode* newNode;
+    newNode(listNode*)malloc( sizeof(istNode)); // 삽입할 새 노드 할당
+    strcpy(newNode->data.x);
+    newNode->link = L-head;
+    L-head-newNode;
+}
+// 노드를 pre 뒤에 삽입하는 연산
+void InsertMiddleNode(IinkedList_he L. listNoden pre. char* x) {
+    ListNode newNode;
+    newNode(listNode*)malloc( sizeof(istNode));
+    strcpy(newNode->data.x);
+    if (L-head - NULL) {
+        newNode->link- NULL; 
+        L-head = newNode;
+    }
+    else if (pre- NULL) { 
+        newNode->link = L-head;
+        L->head - newNode;
+    else { 
+    newNode->link-pre->link;
+    pre->link = newNode; }
+    }
+}
+void InsertLastNode(IinkedList_h* L. char* x) {
+    listNode* newNode;
+    listNode* temp;
+    newNode= (listNode*)malloc(sizeof(listNode)); 
+    strcpy(newNode->data, x);
+    newNode->link = NULL;
+    if (L->head == NULL) {
+        L-head = newNode;
+       return;
+    }
+    temp-> L->head;
+    while (temp->link != NULL) temp = temp->link;
+    temp->link = newNode;
+}
